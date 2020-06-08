@@ -1,0 +1,166 @@
+.screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    opacity: 0;
+    z-index: 100;
+    transition: opacity .3s;
+    visibility: hidden;
+}
+
+.menu-open .screen {
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-header {
+    // margin-bottom: 20px;
+    .nav-container {
+        align-items: center;
+        padding: 0px 20px;
+        background-color: white;
+        // box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.41);
+        .menu-btn {
+            display: none;
+        }
+        nav a {
+            margin-left: 30px;
+            height: 65px;
+            font-size: 20px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: proxima;
+            color: #5f5f63;
+        }
+        nav .router-link-active {
+            background-color: #a283cc42;
+            font-family: proxima-bold;
+        }
+    }
+    .hero {
+        height: 70vh;
+        background-image: url('../assets/img/hero.jpg');
+        // background-image: linear-gradient( rgba(87, 84, 84, 0.603), rgba(255, 255, 255, 0.5)), url('../assets/img/hero.jpg');
+        background-size: cover;
+        .create-station-btn {
+            margin: 1rem;
+            border: 2px solid #ffffff;
+            background-color: #60606375;
+            color: white;
+            cursor: pointer;
+            &:hover {
+                border: 2px solid $clr1;
+                background-color: #dfcde2;
+                color: $clr1;
+            }
+        }
+    }
+    .hero.small {
+        // visibility: hidden;
+        display: none;
+    }
+    .hero.full {
+        // visibility: visible;
+        display: flex;
+    }
+    .hero h2 {
+        border: 1px solid;
+        width: fit-content;
+        align-self: center;
+        margin-top: 220px;
+        font-size: 40px;
+        color: white;
+        background-color: #3a383842;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-container {
+        background-color: white;
+    }
+    .nav-container {
+        .search {
+            display: flex;
+            width: 250px;
+        }
+        .searchTerm {
+            width: 100%;
+            border: 1px solid $clr1;
+            border-right: none;
+            padding-left: 16px;
+            height: 36px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        .searchButton {
+            width: 40px;
+            height: 36px;
+            border: 1px solid $clr1;
+            background: $clr1;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+}
+
+.logo {
+    font-family: Monoton, cursive;
+    color: #8067a2;
+}
+
+@media (max-width: 850px) {
+    .main-header .nav-container {
+        padding: 10px;
+        .search {
+            width: 200px;
+        }
+        .menu-btn {
+            display: inline-block;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+        }
+        nav {
+            flex-direction: column;
+            background-color: #ffffff;
+            position: absolute;
+            transform: translate(120%, 0);
+            transition: transform .8s, box-shadow .3s, display .1s;
+            box-shadow: 0px 0px 20px rgb(0, 0, 0);
+            top: 0;
+            right: 0;
+            height: 100vh;
+            z-index: 200;
+            width: 50vw;
+            display: none;
+            a {
+                margin: 0;
+                width: 100%;
+                margin-left: 0;
+            }
+            .loggedin-user {
+                order: -1;
+            }
+        }
+    }
+    .menu-open .main-header nav {
+        display: flex;
+        transform: translate(0, 0);
+    }
+}
+
+@media (max-width: 540px) {
+    h1.logo {
+        font-family: Monoton, cursive;
+        font-size: 1.2rem
+    }
+}

@@ -1,0 +1,107 @@
+.song-list {
+    flex-grow: 1;
+    overflow: hidden;
+    .container-of-song-list {
+        height: 100%;
+        overflow-y: scroll;
+        @include scrollbsr-design;
+    }
+    @include clean-list;
+    .song-in-list {
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid rgb(226, 226, 226);
+        padding: 1%;
+        // margin: 1%;
+        margin: 0;
+        .left-sec-song-line {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &:hover {
+                .play-on-img {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: visibility 0s linear 0s, opacity 300ms;
+                }
+            }
+            .play-on-img {
+                cursor: pointer;
+                color: white;
+                position: absolute;
+                text-shadow: #000000 0px 0px 8px;
+                font-size: 1.5em;
+                -ms-flex-item-align: center;
+                align-self: center;
+                left: 1.5em;
+                opacity: 0;
+                -webkit-transition: visibility 0s linear 300ms, opacity 300ms;
+                transition: visibility 0s linear 300ms, opacity 300ms;
+                visibility: hidden;
+            }
+            .inner-txt-song {
+                padding: 0.4em;
+                p {
+                    background-color: inherit;
+                    margin: 0 0.4em;
+                }
+                p.song-add-by-name {
+                    font-size: 0.7em;
+                    color: lighten($color: $clr1, $amount: 40);
+                    margin: 0 0.4em;
+                }
+            }
+        }
+        .remove-song-btn {
+            visibility: hidden;
+            border: none;
+            color: inherit;
+            background-color: transparent;
+        }
+        img {
+            width: 6em;
+        }
+        &:hover .remove-song-btn {
+            visibility: visible;
+            cursor: pointer;
+        }
+        &:nth-child(odd) {
+            background-color: #f3f3f4;
+        }
+        &.playing {
+            border: 2px solid $clr3;
+        }
+        .playing-song-gif {
+            padding-right: 0.4em;
+            width: 3em;
+            filter: hue-rotate(270deg) saturate(220%);
+        }
+        // button {
+        //     @include clear-button;
+        //     color: $clr3;
+        //     padding-right: 0.4em;
+        //     visibility: hidden;
+        // }
+        &:hover button {
+            visibility: visible;
+        }
+    }
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .5s;
+    }
+    .fade-enter,
+    .fade-leave-to/* .fade-leave-active below version 2.1.8 */
+    {
+        opacity: 0;
+    }
+}
+
+// @include for-normal-layout {
+//     .song-list {
+//         .container-of-song-list {
+//             overflow-y: unset;
+//         }
+//     }
+// }

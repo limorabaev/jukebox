@@ -1,0 +1,107 @@
+.chat-room {
+    flex-basis: 35%;
+    // height: 100%;
+    // background-color: lighten($color: $clr6, $amount: 12%);
+    background-image: url('../assets/img/1515.jpeg');
+    border-radius: 0.25rem;
+    // border: 1px solid rgb(226, 226, 226);
+    // padding: 1%;
+    // margin: 1%;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .chat-header {
+        display: flex;
+        color: $clr2;
+        justify-content: space-between;
+        background-color: $clr3;
+        border-radius: 0.25rem;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        // padding: 0.4em;
+        padding: 0.65em;
+        // margin: 0;
+        button {
+            @include clear-button;
+        }
+    }
+    .msgs-sec {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        overflow-y: scroll;
+        // background-color: lighten($color: $clr6, $amount: 12%);
+        // background-size: contain;
+        @include scrollbsr-design;
+    }
+    @include for-normal-layout {
+        flex-basis: 100%;
+        margin-left: 0;
+    }
+}
+
+form {
+    // grid-row: 2/3;
+    // position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    margin: 0;
+    max-width: inherit;
+}
+
+.chat-msg-line {
+    max-width: inherit;
+    display: block;
+    width: fit-content;
+    .user-name-title {
+        font-size: 0.8rem;
+    }
+    background-color: $clr3;
+    color: $clr2;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
+    &::before {
+        background-color: $clr3;
+        content: "\00a0";
+        display: block;
+        height: 16px;
+        position: absolute;
+        top: 11px;
+        transform: rotate( 29deg) skew( -35deg);
+        -moz-transform: rotate( 29deg) skew( -35deg);
+        -ms-transform: rotate( 29deg) skew( -35deg);
+        -o-transform: rotate( 29deg) skew( -35deg);
+        -webkit-transform: rotate( 29deg) skew( -35deg);
+        width: 20px;
+    }
+}
+
+.user-msg-bubble {
+    align-self: flex-start;
+    float: left;
+    margin: 5px 45px 5px 20px;
+    &::before {
+        box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4);
+        left: -9px;
+    }
+}
+
+.others-msg-bubble {
+    align-self: flex-end;
+    background-color: $clr7;
+    float: right;
+    margin: 5px 20px 5px 45px;
+    &::before {
+        background-color: $clr7;
+        box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4);
+        right: -9px;
+    }
+}

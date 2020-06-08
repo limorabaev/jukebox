@@ -1,0 +1,57 @@
+.station-preview{
+    transition: background-color 500ms linear;
+    font-family: proxima;
+    color:white;
+    background-color: #bfbfbf;
+    
+    .content{
+        padding: rem(10px);
+    }
+    h3{
+        color:white;
+        margin-bottom: 0;
+        font-size: 18px;
+        // font-size: rem(20px)
+    }
+    img{
+        mix-blend-mode: multiply;
+    }
+    p{
+        color:white;
+
+        margin-top: 0;
+        margin-bottom: rem(5px);
+        font-size: rem(13px)
+    }
+    small {
+        color:white;
+
+        margin-right: rem(12px);
+
+    }
+    .play{
+        color:white;
+        position: absolute;
+        top: 35%;
+        text-shadow: #000000 0px 0px 8px;
+        font-size: 3em;
+        align-self: center;
+        padding-top: rem(15px);
+        opacity: 0;
+        transition: visibility 0s linear 300ms, opacity 300ms;
+        visibility: hidden;
+    }
+ 
+}
+
+.station-preview:hover{
+    background-color: #6f6e6e;
+    cursor: pointer;
+    
+    .preview-details{
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 300ms;
+    }
+
+}

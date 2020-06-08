@@ -1,0 +1,55 @@
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.4rem;
+    h2 {
+        margin-bottom: 4rem;
+    }
+    h3 {
+        margin-top: 4rem;
+        margin-bottom: 0;
+    }
+    ul.user-stations {
+        @include clean-list;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        li a {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 0.4rem;
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+        }
+    }
+    .imgs-sec {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        transform: rotate(12deg);
+        .profile-img-record-cover {
+            width: 50%;
+            position: absolute;
+            z-index: 1;
+            filter: drop-shadow(0 5px 0px #666);
+        }
+        .record-img {
+            filter: drop-shadow(5px 5px 5px #666);
+            position: relative;
+            width: 47%;
+            left: 25%;
+            background-position: center, center;
+            background-size: cover, 40% auto;
+            background-repeat: no-repeat;
+            border-radius: 100%;
+            background-size: 40%;
+            transform: rotate(20deg);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.home-page {
+    .stations-by-tag{
+        margin-bottom: 50px;
+    }
+
+    margin-top: rem(20px);
+    .tag-container {
+        border-bottom: 1px solid;
+        margin-bottom: 15px;
+        a {
+            display: flex;
+            align-items: flex-end;
+            text-decoration: none;
+            color: #b9baba;
+        }
+    }
+    h2 {
+        margin-bottom: 0;
+        font-family: proxima-bold;
+    }
+    p {
+        align-items: center;
+        display: flex;
+        margin-bottom: 0;
+    }
+}

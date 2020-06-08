@@ -1,0 +1,141 @@
+                * {
+                    box-sizing: border-box;
+                }
+                
+                html {
+                    // font-family: OpenSans, sans-serif;
+                    // line-height: 1.8;
+                    font-family: proxima, Varela_Round;
+                    color: $clr2;
+                }
+                
+                body {
+                    margin: 0;
+                    // font-family: proxima-bold;
+                    background-color: $clr4;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                }
+                
+                img {
+                    width: 100%;
+                }
+                
+                button {
+                    cursor: pointer;
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+                
+                ////Fixed Elements 
+                .buttons {
+                    font-size: 0.8rem;
+                    border-radius: 0.25rem;
+                    border: none;
+                    background-color: $clr3;
+                    color: $clr2;
+                    padding: 0.5rem 0.8rem;
+                }
+                
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                p {
+                    font-weight: normal;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1rem;
+                }
+                
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    font-family: proxima-bold;
+                }
+                
+                h1 {
+                    color: $clr1;
+                    font-size: 2rem;
+                }
+                
+                h2 {
+                    font-size: 1.5rem;
+                }
+                
+                h3 {
+                    font-size: 1.18rem;
+                }
+                
+                h2,
+                div,
+                p {
+                    color: darken($color: $clr6, $amount: 12);
+                }
+                
+                h3,
+                h4 {
+                    color: lighten($color: $clr1, $amount: 30);
+                    margin: 0 0 rem(20px);
+                    // font-family: Baloo2-Bold, sans-serif;
+                    // font-size: rem(70px);
+                    // line-height: 1;
+                }
+                
+                a {
+                    text-decoration: none;
+                }
+                
+                input[type=range] {
+                    border: none;
+                    -webkit-appearance: none;
+                    background: transparent;
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+                
+                input[type=range]::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    background: $clr1;
+                    height: 18px;
+                    width: 18px;
+                    margin-top: -8px;
+                    border-radius: 99px;
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+                
+                input[type=range]::-webkit-slider-runnable-track {
+                    width: 300px;
+                    height: 4px;
+                    background: #ddd;
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+                
+                input {
+                    padding: 0.25rem;
+                    padding-left: 1rem;
+                    border-radius: 0.25rem;
+                    border: 1px solid darken($color: $clr6, $amount: 12);
+                }
+                
+                .input-with-btn {
+                    border-radius: 0.25rem 0 0 0.25rem;
+                    border: 1px solid $clr3;
+                    width: 100%;
+                }
+                
+                .button-of-input {
+                    border-radius: 0 0.25rem 0.25rem 0;
+                    background-color: $clr3;
+                }

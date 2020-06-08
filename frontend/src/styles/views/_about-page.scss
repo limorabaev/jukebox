@@ -1,0 +1,41 @@
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    ul.creators-list {
+        @include clean-list;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 0.4rem;
+            margin: 0.4rem;
+            border-radius: 0.25rem;
+            img {
+                width: 300px;
+                object-fit: cover;
+                border-radius: 50%;
+                padding: 0.4rem;
+            }
+            .text-about-container {
+                padding-left: 0.4rem;
+                width: fit-content;
+                .social-sec {
+                    margin-top: 1.25rem;
+                    a {
+                        text-decoration: none;
+                        font-size: 2rem;
+                        &:not(:first-child) {
+                            margin-left: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

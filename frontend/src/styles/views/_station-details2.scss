@@ -1,0 +1,41 @@
+.station-details {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    .station-details-header {
+        grid-column: 1/-1;
+        grid-row: 1/1;
+    }
+    .video-container {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .songs-list {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        background-color: lightblue;
+        margin: 0 auto;
+    }
+    .station-chat {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        background-color: lightblue;
+    }
+}
+
+// .html5-video-player .video-click-tracking, .html5-video-player .video-stream
+.station-details .video-container {
+    margin: 0 auto;
+    display: flex;
+    align-self: center;
+    // 
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 1;
+    height: 320px;
+    width: 320px;
+}
+
+.video-self {
+    height: 100%;
+}

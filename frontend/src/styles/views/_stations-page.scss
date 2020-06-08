@@ -1,0 +1,10 @@
+.stations-page{
+    margin-top: 50px
+}
+
+.station-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-gap: 20px;
+    @include clean-list;
+}
